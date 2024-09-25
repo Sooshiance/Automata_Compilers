@@ -64,3 +64,23 @@ private:
         return tape.rbegin()->first;
     }
 };
+
+class TuringMachine
+{
+    public:
+    TuringMachine(const std::string &tape_str = "",
+                  char blank_symbol = ' ',
+                  const std::string &initial_state = "",
+                  const std::set<std::string> &final_states = {},
+                  const std::map<std::pair<std::string, char>, std::tuple<std::string, char, char>> &transition_function = {})
+        : tape(tape_str), blank_symbol(blank_symbol), current_state(initial_state),
+          final_states(final_states), transition_function(transition_function), head_position(0) {}
+
+private:
+    Tape tape;
+    int head_position;
+    char blank_symbol;
+    std::string current_state;
+    std::set<std::string> final_states;
+    std::map<std::pair<std::string, char>, std::tuple<std::string, char, char>> transition_function;
+};
