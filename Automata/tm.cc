@@ -76,6 +76,51 @@ class TuringMachine
         : tape(tape_str), blank_symbol(blank_symbol), current_state(initial_state),
           final_states(final_states), transition_function(transition_function), head_position(0) {}
 
+    std::string getTape() const
+    {
+        return tape.toString();
+    }
+
+    void step()
+    {
+        char char_under_head = tape.get(head_position);
+
+        auto x = std::make_pair(current_state, char_under_head);
+
+        auto it = transition_function.find(x);
+
+        if (it != transition_function.end())
+        {
+            auto y = it->second;
+
+            current_state = std::get<0>(y);
+            tape.set(head_position, std::get<1>(y));
+
+            if (std::get<2>(y) == 'R')
+            {
+                head_position++;
+            }
+            else if (std::get<2>(y) == 'L')
+            {
+                head_position--;
+            }
+        }
+        else
+        {
+            std::cout << "No transition found for state " << current_state << " and symbol " << char_under_head << std::endl;
+        }
+    }
+
+    bool isFinal() const
+    {
+        return final_states.find(current_state) != final_states.end();
+    }
+
+    void debug() const
+    {
+        std::cout << "Current state: " << current_state << ", Head position: " << head_position << ", Tape: " << getTape() << std::endl;
+    }
+
 private:
     Tape tape;
     int head_position;
