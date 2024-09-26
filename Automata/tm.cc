@@ -129,3 +129,33 @@ private:
     std::set<std::string> final_states;
     std::map<std::pair<std::string, char>, std::tuple<std::string, char, char>> transition_function;
 };
+
+int main()
+{
+    // Define the transition function
+    std::map<std::pair<std::string, char>, std::tuple<std::string, char, char>> transition_function = {
+        {{"q0", '1'}, {"q1", '0', 'R'}},
+        {{"q0", '0'}, {"q0", '0', 'R'}},
+        {{"q1", '1'}, {"q0", '1', 'L'}},
+        {{"q1", ' '}, {"qf", ' ', 'R'}},
+        {{"q0", ' '}, {"qf", ' ', 'R'}},
+        {{"q1", '0'}, {"q1", '0', 'R'}}
+        };
+
+    // Define the final states
+    std::set<std::string> final_states = {"qf"};
+
+    // Create a Turing machine with an initial tape, blank symbol, initial state, final states, and transition function
+    TuringMachine tm("111", ' ', "q0", final_states, transition_function);
+
+    // Run the Turing machine until it reaches a final state
+    while (!tm.isFinal())
+    {
+        tm.debug();
+        tm.step();
+    }
+
+    std::cout << "Final Tape: " << tm.getTape() << std::endl;
+
+    return 0;
+}
