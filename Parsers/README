@@ -1,0 +1,15 @@
+# Grammers
+
+## LL1
+
+A top-down parser that uses a one-token lookahead is called an LL(1) parser. The first L indicates that the input is read from left to right. The second L says that it produces a left-to-right derivation. And the 1 says that it uses one lookahead token.
+
+For the sake of time we assume these our candidate grammar:
+
+1. E → T E'
+2. E' → + T E' | ε
+3. T → F T'
+4. T' → * F T' | ε
+5. F → ( E ) | id
+
+As you can see, it's a simple grammar for prioritization in mathematics.
