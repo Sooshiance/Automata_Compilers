@@ -150,9 +150,6 @@ Can we design a machine which if given a program can find out if that program wi
 An example of **Halt** problem is in **Cryptographic** problems.
                             
                         g++ tm.cc -o tm
-        ----------------------------------------------
-
-        ----------------------------------------------
 
 
 # Compilers
