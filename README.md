@@ -98,7 +98,7 @@ Read these theorems:
 
                                 cutting the tape
       -------------------------------------------------------------------------------
-    ∞                                        |                                        ∞
+                                           |                                       
       -------------------------------------------------------------------------------
 
 
@@ -148,5 +148,11 @@ Can we design a machine which if given a program can find out if that program wi
 - In the general state The **Halt** problem will never stop in an specific state. You can set a limitation and solve it.
 
 An example of **Halt** problem is in **Cryptographic** problems.
+
+For more information about Halt problem: 
+---
+https://www.geeksforgeeks.org/halting-problem-in-theory-of-computation/ 
+---
+
 
 # Compilers
