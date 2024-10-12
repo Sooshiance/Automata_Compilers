@@ -78,7 +78,7 @@ About the **`PDA`** and **`DPDA`**:
 
 - If **`L(A)`** is a language accepted by a **`PDA`** A, it can also be accepted by a **`DPDA`** if and only if there is a `single` computation from the initial configuration until an accepting one for all strings belonging to **`L(A)`**
 
-- The power of **`PDA`** will change, If the **number** of tapes of stack increases.
+- The power of **`PDA`** will change, If the **number** of tapes of stack increases. It means A **`PDA`** machine with `two` stacks is powerful than a machine that has `one` stack.
 
 ## LBA
 
