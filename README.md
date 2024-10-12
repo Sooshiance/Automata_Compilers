@@ -96,19 +96,7 @@ Read these theorems:
 
 - You can `cut` the tape and put the two new part side by side `without losing` the machine's power. like this:
 
-                                cutting the tape
-      -------------------------------------------------------------------------------
-                                           |                                       
-      -------------------------------------------------------------------------------
-
-
----------------------------------------
-|                                       ∞  <--- part 1
----------------------------------------
----------------------------------------
-|                                       ∞  <--- part 2
----------------------------------------
-
+<img src="./preview/infinite vs one way infinite.jpg" />
 
 This powerful machine can define with 7-tuples:
 
