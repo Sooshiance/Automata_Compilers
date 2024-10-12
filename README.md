@@ -121,7 +121,7 @@ How to change **Turing machine** into:
 
 **`Halt of Turing Machine problem`**:
 
-Before we understanding the **Halt** problem, let's discuss about:
+Before we understanding the **Halt** problem, let's discuss about some basic concepts of it.
 
 - **Computability theory**:The branch of theory of computation that studies which problems are computationally solvable using different model.
 
@@ -135,9 +135,17 @@ Can we design a machine which if given a program can find out if that program wi
 
 - In the general state The **Halt** problem will never stop in an specific state. You can set a limitation and solve it.
 
-An example of **Halt** problem is in **Cryptographic** problems.
-                            
-                        g++ tm.cc -o tm
+An example of **Halt** problem is in **Cryptographic** problems. No men or machine can break a strong password. For example in **`RSA`** algorithm, we choose two big primary numbers. Since these numbers can't be guessed or predicted, No one can find the message.
 
+Just one recommendation: Search about ***`Kolmogorov theory`*** and ***`Kolmogorov complexity`***.(These are the basics of Information technology and face detection).
+
+# Parsers
+
+There 4 main categories for parsers:
+
+- ***`LL(k)`***: is a top-down parser for a restricted context-free language.
+- ***`SLR`***: is an efficient bottom-up syntax analysis technique that can be used to parse large classes of context-free grammar.
+- ***`CLR`***: is Canonical LR parser.
+- ***`LALR`***: is  the most powerful parser which can handle large classes of grammar.
 
 # Compilers
